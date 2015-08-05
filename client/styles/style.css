@@ -8,6 +8,7 @@ body{
 input{
   width: 300px;
   font-size: 1em;
+  text-align: center;
 }
 
 button {
@@ -34,23 +35,37 @@ button {
 }
 
 .mybutton {
-  width: 30%;
+  width: 50%;
   display: inline-block;
   font-size: 1em;
   position: relative;
   margin: 10px 0 10px 0;
 }
-.event, .alarm-time, .remaining-time, .day{
+.event, .alarm-time, .remaining-time, .alarm-day{
+  height: 100%;
+  vertical-align: middle;
+  position: relative;
+  margin: auto;
   display: inline-block;
   color: white;
-  position: relative;
-  top: 10px;
+}
+
+.remaining-time{
+  float: left;
+  width: 30%;
+  font-size: 1.2em;
 }
 
 .event{
-  position: relative;
-  left: -10px;
-  font-size: 2em;
+  width: 30%;
+  top: 20px;
+  font-size: 1em;
+}
+
+.alarm-info{
+  float: right;
+  width: 30%;
+  margin-right: 15px;
 }
 
 .clock{
@@ -58,10 +73,11 @@ button {
   font-size: 2em;
 }
 
-input {
-  text-align: center;
-}
 
 .alert{
   background:red;
+}
+
+.tomorrow{
+  background: blue;
 }

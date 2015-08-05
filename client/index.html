@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>List</title>
+  </head>
+  <body>
+    <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
+     below them until after the scripts load-->
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <script src="../bower_components/jquery/jquery.min.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/backbone/backbone.js"></script>
+    <script src="data/data.js"></script>
+    <script src="models/ConsoleModel.js"></script>
+    <script src="models/ListEntryModel.js"></script>
+    <script src="models/AppModel.js"></script>
+    <script src="views/ConsoleView.js"></script>
+    <script src="views/ListEntryView.js"></script>
+    <script src="views/ListView.js"></script>
+    <script src="views/AppView.js"></script>
+    <script src="collections/ListCollection.js"></script>
+
+    <input id="event-form" type="text" name="event" placeholder="enter event">
+    <input id="time-form" type="text" name="time" placeholder="enter time">
+    <script>
+      var audioElement = document.createElement('audio');
+      audioElement.setAttribute('src', 'chime.mp3');
+
+      $(function(){
+        var app = new AppModel();
+        var appView = new AppView({model: app});
+        $('body').append(appView.render());
+      });
+    </script>
+
+  </body>
+</html>

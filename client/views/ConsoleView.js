@@ -1,6 +1,6 @@
 var ConsoleView = Backbone.View.extend ({
   initialize: function(){
-    this.$el.append('<button class="mybutton">add to list</button>')
+    this.$el.append('<button class="mybutton">add to list</button>');
   },
 
   events:{

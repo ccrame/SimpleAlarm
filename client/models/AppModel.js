@@ -25,6 +25,7 @@ var AppModel = Backbone.Model.extend({
     //data
     this.set('console', new ConsoleModel());
     this.set('eventList', new ListCollection());
+    this.set('clock', new ClockModel());
 
     this.get('eventList').on('removeFromList',function(x){
       this.get('eventList').remove(x.cid);
@@ -39,19 +40,27 @@ var AppModel = Backbone.Model.extend({
     });
 
     this.get('console').on('addToList', function(){
+      var hours; 
+      var minutes;
       var newEvent = $('#event-form').val();
       var input = $('#time-form').val().split(' ').join('');
-      if(newEvent.length < 1 || input.length < 2){
+      if(newEvent.length < 1 || input.length < 1){
         return;
       }
       var currentTime = new Date;
       var eventTime = new Date;
-      var hours = Math.floor(+input / 100);
-      var minutes = input%100;
+      if((/\:/).test(input)){
+        input = input.split(':');
+        hours = input[0];
+        minutes = input[1];
+        eventTime.setHours(hours);
+        eventTime.setSeconds(0);
+        eventTime.setMinutes(minutes);
+      } else {
+        eventTime.setMinutes(+input + currentTime.getMinutes());
+        eventTime.setSeconds(currentTime.getSeconds());
+      }
 
-      eventTime.setHours(hours);
-      eventTime.setMinutes(minutes);
-      eventTime.setSeconds(0);
 
       if(eventTime < currentTime){
         eventTime.setDate(currentTime.getDate()+1);
@@ -64,7 +73,6 @@ var AppModel = Backbone.Model.extend({
         time: eventTime,
         day: dayName
       };
-      console.log('the list ', this.get('eventList'));
       this.get('eventList').add(obj);
 
     },this);

@@ -47,11 +47,19 @@ var AppModel = Backbone.Model.extend({
       if(newEvent.length < 1 || input.length < 1){
         return;
       }
+      var meridiem = "";
+      window.console.log('input is ', input);
+      input = input.replace(/[a-z]/ig,function(x){
+        meridiem += x;
+        return "";
+      });
+      window.console.log('input after replace is ', input);
+      meridiem = (/pm/ig).test(meridiem) ? 12 : 0;
       var currentTime = new Date;
       var eventTime = new Date;
       if((/\:/).test(input)){
         input = input.split(':');
-        hours = input[0];
+        hours = +input[0] < 12 ? +input[0] + meridiem : +input[0];
         minutes = input[1];
         eventTime.setHours(hours);
         eventTime.setSeconds(0);

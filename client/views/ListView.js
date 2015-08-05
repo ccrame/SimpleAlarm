@@ -5,10 +5,9 @@ var ListView = Backbone.View.extend ({
   },
 
   render: function(){
-
-    console.log('list view render');
+    var title = this.collection.length > 0 ? 'Upcoming Events' : 'No Events';
     this.$el.children().detach();
-    this.$el.html('<div class="list-title">Upcoming Events</div>').append(
+    this.$el.html('<div class="list-title">' + title + '</div>').append(
       this.collection.map(function(listEntry){
         return new ListEntryView({model: listEntry}).render();
       })

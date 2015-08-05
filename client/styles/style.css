@@ -1,3 +1,10 @@
+body{
+  padding: 50px 10% 0 10%;
+  margin: auto;
+  text-align: center;
+  width: 70%;
+}
+
 input{
   width: 300px;
   font-size: 1em;
@@ -10,7 +17,7 @@ button {
 }
 
 .list-title{
-  margin-top: 30px;
+  margin-top: 20px;
   padding: 10px;
   color: white;
   background: black;
@@ -21,25 +28,40 @@ button {
 .list-entry{
   text-align: center;
   margin-top: 5px;
-  height: 70px;
+  height: 60px;
   background: green;
   border-radius: 5px;
 }
 
-.list-entry span{
+.mybutton {
+  width: 30%;
+  display: inline-block;
+  font-size: 1em;
+  position: relative;
+  margin: 10px 0 10px 0;
+}
+.event, .alarm-time, .remaining-time, .day{
+  display: inline-block;
   color: white;
   position: relative;
-  top: 25px;
+  top: 10px;
 }
 
-.mybutton {
+.event{
   position: relative;
-  top: 20px;
+  left: -10px;
+  font-size: 2em;
 }
 
-.header{
-
+.clock{
+  display: inline-block;
+  font-size: 2em;
 }
 
-.current-time{
+input {
+  text-align: center;
+}
+
+.alert{
+  background:red;
 }

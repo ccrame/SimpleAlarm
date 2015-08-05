@@ -15,11 +15,16 @@ var ListEntryView = Backbone.View.extend ({
 
   render: function(){
     this.$el = this.$el.addClass('list-entry').html(this.template(this.model.attributes));
+    //add classes
+    this.model.get('time').getDate() > (new Date).getDate() ? this.$el.addClass('tomorrow') : 0;
     this.timeLeft().length === 10 ? this.$el.addClass('alert'): this.$el;
-    this.$el.append('<div class="event">'+ this.model.get('event') +'</div>');
-    this.$el.append('<div class="alarm-time">' + this.alarmTime() + '</div>');
+    //attach stuff to the element
     this.$el.append('<div class="remaining-time">' + this.timeLeft() + '</div>');
-    this.$el.append('<div class="day">'+ this.model.get('day') + '</div>');
+    this.$el.append('<div class="event">'+ this.model.get('event') +'</div>');
+    this.$el.append('<div class="alarm-info">\
+                       <div class="alarm-day">'+ this.model.get('day') + '</div><br>\
+                       <div class="alarm-time">' + this.alarmTime() + '</div>\
+                     </div>');
     return this.$el;
   },
 

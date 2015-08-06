@@ -22,7 +22,7 @@ var ListEntryView = Backbone.View.extend ({
     this.$el.append('<div class="remaining-time">' + this.timeLeft() + '</div>');
     this.$el.append('<div class="event">'+ this.model.get('event') +'</div>');
     this.$el.append('<div class="alarm-info">\
-                       <div class="alarm-day">'+ this.model.get('day') + '</div><br>\
+                       <div class="alarm-day">'+ this.model.get('day') + '</div>\
                        <div class="alarm-time">' + this.alarmTime() + '</div>\
                      </div>');
     return this.$el;

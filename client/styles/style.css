@@ -41,36 +41,42 @@ button {
   position: relative;
   margin: 10px 0 10px 0;
 }
-.event, .alarm-time, .remaining-time, .alarm-day{
+.event, .alarm-info, .remaining-time {
   height: 100%;
-  vertical-align: middle;
   position: relative;
-  margin: auto;
   display: inline-block;
   color: white;
 }
 
 .remaining-time{
+  height: 60px;
+  line-height: 60px;
   float: left;
   width: 30%;
   font-size: 1.2em;
 }
 
 .event{
+  height: 60px;
+  line-height: 60px;
   width: 30%;
-  top: 20px;
   font-size: 1em;
 }
 
 .alarm-info{
   float: right;
   width: 30%;
-  margin-right: 15px;
 }
 
 .clock{
   display: inline-block;
   font-size: 2em;
+}
+
+.alarm-day, .alarm-time {
+  font-size: .8em;
+  padding: 5px;
+  margin: 0;
 }
 
 

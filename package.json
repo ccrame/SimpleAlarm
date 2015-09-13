@@ -1,0 +1,23 @@
+{
+  "name": "done_mvp-project",
+  "version": "1.0.0",
+  "description": "a simple alarm app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccrame/SimpleTimer.git"
+  },
+  "keywords": [
+    "simple",
+    "timer"
+  ],
+  "author": "Charles Crame",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ccrame/SimpleTimer/issues"
+  },
+  "homepage": "https://github.com/ccrame/SimpleTimer#readme"
+}

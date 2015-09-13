@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/ccrame/SimpleTimer/issues"
   },
-  "homepage": "https://github.com/ccrame/SimpleTimer#readme"
+  "homepage": "https://github.com/ccrame/SimpleTimer#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
 }

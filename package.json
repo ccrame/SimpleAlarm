@@ -2,7 +2,7 @@
   "name": "done_mvp-project",
   "version": "1.0.0",
   "description": "a simple alarm app",
-  "main": "index.js",
+  "main": "index.sh",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
 	"script": "init.sj"

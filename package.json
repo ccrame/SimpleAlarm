@@ -5,7 +5,7 @@
   "main": "index.sh",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"script": "init.sj"
+    "script": "init.sj"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/ccrame/SimpleTimer#readme",
   "dependencies": {
+    "bower": "^1.5.2",
     "express": "^4.13.3"
   }
 }

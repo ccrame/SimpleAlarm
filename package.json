@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/ccrame/SimpleTimer#readme",
   "dependencies": {
-    "bower": "^1.5.2",
     "express": "^4.13.3"
   }
 }
